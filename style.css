@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none ; by doing this, on multiple clicking the element wont get selected to copy it,applying it to all
+    /* user-select: none ; by doing this, on multiple clicking the element wont get selected to copy it,applying it to all */
     font-family: monospace;
   }
   
