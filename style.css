@@ -251,20 +251,20 @@
     #array_speed{
       font-size: 13px;
       position: relative;
-      left: 15vw;
+      left: 12vw;
     }
 
     #a_size{
       position: relative;
       left: 10vw;
       width: 20%;
-      top: 2vw;
+      top: 3.5vw;
     }
 
     #a_speed{
       position: relative;
-      left: 25vw;
-      top: 2vw;
+      left: 27vw;
+      top: 3.5vw;
       width: 20%;
     }
 
@@ -275,7 +275,7 @@
       height: 50%;
       width: 60%;
       gap: 2vw ;
-      margin-left: 18vw;
+      margin-left: 19vw;
       margin-top: 5vw;
       margin-bottom: 1vw;
     }
@@ -324,9 +324,21 @@
     #sortbtn{
       color: black;
       border: none;
-      font-size: 3vw;
+      font-size: 2.7vw;
       border-radius: 10px;
-      padding: 2vw 2vw;
+      padding: .5vw 1vw;
     }
+
+    #array_container {
+      display: flex;
+      width: 95%;
+      height: 75%;
+      margin-top : 6%;
+      margin-left: 2.5%;
+      /* background-color: red; */
+      align-items: flex-end;
+    }
+
+
   }
   
