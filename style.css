@@ -20,7 +20,7 @@
   }
   
   #navbar {
-    height: 120px;
+    height: 15vh;
     width: 100%;
     background-color: #34495e;
     display: flex;
@@ -230,5 +230,103 @@
   
   .inp_genDisable{
     pointer-events: none;
+  }
+
+  /* media query */
+  @media (max-width:550px){ /*mobiles*/
+    #navbar{
+     height: 15vh;
+    }
+
+    .generate{
+      font-size: 3vw;
+      width: 20vw;
+    }
+
+    #array_size{
+      font-size: 13px;
+      position: relative;
+      left: -1vw;
+    }
+    #array_speed{
+      font-size: 13px;
+      position: relative;
+      left: 15vw;
+    }
+
+    #a_size{
+      position: relative;
+      left: 10vw;
+      width: 20%;
+      top: 2vw;
+    }
+
+    #a_speed{
+      position: relative;
+      left: 25vw;
+      top: 2vw;
+      width: 20%;
+    }
+
+    #algos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      width: 60%;
+      gap: 2vw ;
+      margin-left: 18vw;
+      margin-top: 5vw;
+      margin-bottom: 1vw;
+    }
+
+    #algo1{
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
+    }
+  
+    #algo2{
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
+    }
+  
+    #algo3{
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
+    }
+    #algo4{
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
+    }
+  
+    #algo5{
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
+    }
+  
+    #algo6{
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
+    }
+  
+    #sortbtn{
+      color: black;
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 2vw 2vw;
+    }
   }
   
