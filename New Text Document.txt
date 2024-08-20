@@ -1,0 +1,455 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none ; /* by doing this, on multiple clicking the element wont get selected to copy it,applying it to all*/
+    font-family: monospace;
+  }
+  
+  html,body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  #main {
+    height: 100%;
+    width: 100%;
+    background-color: #e9dfdf;
+  }
+  
+  #navbar {
+    height: 120px;
+    width: 100%;
+    background-color: #34495e;
+    display: flex;s
+    flex-wrap: wrap;
+    color: white;
+/* (top bottom  left right) */
+    padding: 0 3%; 
+    position: relative;
+  }
+  
+  #algos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 60%;
+    gap: 2vw ;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    
+  }
+
+  .generate{
+    height: 5vmin;
+    margin-top: 2.3vw;
+    margin-bottom: 1vw;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+  }
+  
+  #array_size {
+    height: 17%;
+    width: 12%;
+    margin-top: 2.1%;
+    margin-right: 0.5%;
+    font-size: 16px;
+    margin-left: 20px;
+    position: relative;
+    right: -5vmin;
+  }
+  
+  #a_size {
+    -webkit-appearance: none;
+    height: 7%;
+    width: 8.5%;
+    margin-top: 3.9%;
+    margin-left: -12%;
+    margin-right: 0.3%;
+    background: #fff;
+    outline: none;
+    border-radius: 4px;
+    position: relative;
+    left: 3.5vmin;
+  }
+  
+  #a_size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13.8px;
+    height: 13.8px;
+    border-radius: 50%;
+    background: magenta;
+    cursor: pointer;
+  }
+  
+  #array_speed {
+    height: 17%;
+    width: 12%;
+    margin-top: 2.1%;
+    margin-left: 2%;
+    font-size: 16px;
+    position: relative;
+    right: -5vmin;
+  }
+  
+  #a_speed {
+    -webkit-appearance: none;
+    height: 7%;
+    width: 8.5%;
+    margin-top: 3.9%;
+    margin-left: -10.4%;
+    margin-right:4%;
+    background: white;
+    outline: none;
+    border-radius: 4px;
+    position: relative;
+    left: 2vmin;
+  }
+  
+  #a_speed::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13.8px;
+    height: 13.8px;
+    border-radius: 50%;
+    background: magenta;
+    cursor: pointer;
+  }
+  
+  .sortingAlgo {
+    height: 17%;
+    width: 50%;
+    margin-top: 2.4%;
+    font-size: 16px;
+  }
+  
+  .sort_button {
+    height: 17%;
+    width: 15%;
+    margin-top: 2.4%;
+    margin-left: -2%;
+    font-size: 16px;
+  }
+  
+  #algo1{
+    height: 5vmin;
+    border: none;
+    border-radius: 30px;
+  }
+
+  #algo2{
+    margin-left: 3%;
+    height: 5vmin;
+    border: none;
+    border-radius: 30px;
+  }
+
+  #algo3{
+    height: 5vmin;
+    border: none;
+    border-radius: 30px;
+  }
+  
+  #algo4{
+    margin-left: 3%;
+    height: 5vmin;
+    border: none;
+    border-radius: 30px;
+  }
+  
+  #algo5{
+    height: 5vmin;
+    border: none;
+    border-radius: 30px;
+    
+  }
+  #algo6{
+    margin-left: -1%;
+    height: 5vmin;
+    border: none;
+    border-radius: 30px;
+  }
+
+  #sortbtn{
+    height: 5vmin;
+    color: black;
+    height: 5vmin;
+    position: relative;
+    right: -60px;
+    border: none;
+    border-radius: 30px;
+  }
+
+
+  #array_generate:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+  
+  #array_size:hover {
+    cursor: default;
+  }
+  
+  #array_speed:hover {
+    cursor: default;
+  }
+  
+  .sortingAlgo:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+  
+  .sort_button:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+  
+  #array_container {
+    display: flex;
+    width: 70%;
+    height: 75%;
+    margin-top : 2.2%;
+    margin-left: 15%;
+    /* background-color: red; */
+    align-items: flex-end;
+  }
+  
+  
+  .hide {
+    display: none !important;  /* !important --> written to make sure we dont want to change it, if in media query this doesnt work as expected make it important*/
+  }
+  
+  .butt_selected{
+     color: rgb(0, 119, 255);
+     cursor: pointer;
+  }
+  
+  .butt_locked{
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .butt_locked:hover{
+    opacity: 100%;
+    cursor: default;
+  }
+  
+  .inp_genDisable{
+    pointer-events: none;
+  }
+  
+  
+  /* media query */
+  @media (max-width:550px){ /*mobiles*/
+     #navbar{
+      height: 11%;
+     }
+  
+     #array_generate {
+      display: inline-block;
+      width : 12%;
+      font-size: 10px;
+      /* white-space: nowrap; */
+      margin-left:0.3%;
+      margin-top: 2%;
+      margin-right: 2%;
+    }
+    
+    #array_size{
+      display: inline-block;
+      font-size: 10px;
+      margin-top:2%;
+      margin-right: 6%;
+    }
+  
+    #array_speed{
+      display: inline-block;
+      /* white-space: nowrap; */
+      width : 9%;
+      font-size: 10px;
+      margin-top:2%;
+      margin-right: 3%;
+    }
+  
+    #a_size {
+      -webkit-appearance: none;
+      height: 6%;
+      width: 9.5%;
+      margin-top: 11%;
+      margin-left: -18%;
+      margin-right: 2%;
+      background: #fff;
+      outline: none;
+      border-radius: 4px;
+    }
+    
+    #a_size::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 8.5px;
+      height: 8.5px;
+      border-radius: 50%;
+      background: magenta;
+      cursor: pointer;
+    }
+    
+    #a_speed {
+      -webkit-appearance: none;
+      height: 6%;
+      width: 9.5%;
+      margin-top: 11%;
+      margin-left: -12%;
+      margin-right:5%; 
+      background: white;
+      outline: none;
+      border-radius: 4px;
+    }
+    
+    #a_speed::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 8.5px;
+      height: 8.5px;
+      border-radius: 50%;
+      background: magenta;
+      cursor: pointer;
+    }
+     
+    #algos{
+       margin-left:-1%;
+    }
+    
+    .sortingAlgo{
+      height: 25%;
+      font-size: 10px;
+    }
+    .sort_button{
+      display: inline-block;
+      font-size: 10px;
+      margin-top:8%;
+      margin-left: -5%;
+    }
+  
+    #algo1{
+      display: inline-block;
+      width: 40%;
+      margin-right: 10%;
+      margin-top:3%;
+    }
+    #algo2{
+      margin-top:14%;
+      width: 40%;
+      margin-left:-38%;
+      margin-right: 3%;
+    }
+    #algo3{
+      display: inline-block;
+      width: 40%;
+      margin-right: 1%;
+      margin-top:3%;
+      margin-left:-8%;
+    }
+    #algo4{
+      margin-top:14%;
+      width: 40%;
+      margin-left:-31%;
+      margin-right: 3%;
+    }
+    #algo5{
+      display: inline-block;
+      width: 25%;
+      margin-right: 0%;
+      margin-left:-8%;
+      margin-top:3%;
+    }
+    #algo6{
+      margin-top:14%;
+      width: 40%;
+      margin-left:-20%;
+      margin-right: 0%;
+    }
+    #array_container {
+      display: flex;
+      width: 95%;
+      height: 75%;
+      margin-top : 6%;
+      margin-left: 2.5%;
+      /* background-color: red; */
+      align-items: flex-end;
+    }
+  }
+  
+  @media (min-width: 780px) and (max-width: 1100px) {
+    #navbar{
+      height: 14%;
+    }
+    #array_generate{
+      font-size: 13px;
+      margin-top:2%;
+    }
+    #array_size{
+      font-size: 13px;
+    }
+    #array_speed{
+      font-size: 13px;
+      margin-right: 2%;
+    }
+  
+    #a_size {
+      width: 8%;
+      margin-top: 5.8%;
+      margin-left: -12%;
+      margin-right: 3%;
+    }
+    
+    #a_size::-webkit-slider-thumb {
+      width: 8.5px;
+      height: 8.5px;
+    }
+    
+    #a_speed {
+      width: 8%;
+      margin-top: 5.8%;
+      margin-left:-13%
+    }
+    
+    #a_speed::-webkit-slider-thumb {
+      width: 8.5px;
+      height: 8.5px;
+    }
+  
+    .sortingAlgo{
+      font-size: 13px;
+      margin-top: 2%;
+    }
+  
+    .sort_button{
+      margin-top: 3%;
+      font-size: 13px;
+    }
+  
+    #algo2{
+      margin-right: 2%;
+    }
+    #algo4{
+      margin-right: 3%;
+    }
+    #algo5{
+      margin-right: 4%;
+    }
+    #algo6{
+      margin-right:6%;
+    }
+    #array_container{
+      margin-top:3%;
+      width: 75%;
+      margin-left: 12%;
+    }
+  
+  }
+    
